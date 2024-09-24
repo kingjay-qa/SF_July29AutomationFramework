@@ -131,5 +131,12 @@ Set <String> allWindows = driver.getWindowHandles();
 	public void clickLeads() {
 		leadsTab.click();
 	}
+	
+	public void loggingOut() {
+		userMenu.click();
+		logger.info("User Menu Selected");
+		logOut.click();
+		logger.info("Logout has been clicked");
+	}
 
 }

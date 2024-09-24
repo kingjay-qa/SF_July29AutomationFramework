@@ -62,10 +62,7 @@ public class SF_LeadsTest extends SF_BaseTest{
 			logger.info("Today's Leads Selected");	
 
 		
-		hp.clickUserMenu();
-		logger.info("User Menu Selected");
-		hp.Logout();
-		logger.info("User logged out");
+			hp.loggingOut();
 		
 		
 		lp.loginToApp(driver);
@@ -73,10 +70,7 @@ public class SF_LeadsTest extends SF_BaseTest{
 		System.out.println(driver.getTitle());
 		ld.Goo();
 		
-		hp.clickUserMenu();
-		logger.info("User Menu Selected");
-		hp.Logout();
-		logger.info("User logged out");	
+		hp.loggingOut();	
 		System.out.println("Test Case 22 Complete");
 	}
 
