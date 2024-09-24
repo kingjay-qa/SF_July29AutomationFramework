@@ -42,13 +42,16 @@ public class LoginPage extends BasePage {
 
 public void enterUsername(String username) {
 	this.userName.sendKeys(username);
+	logger.debug("User name has been entered");
 }
 public void LoggedError() {
 	loginError.getText();
+	logger.debug("Login error text available");
 }
 
 public void enterPassword(String passWord) {
 	this.password.sendKeys(passWord);
+	logger.debug("Password entered");
 }
 
 public String getErrorMessage() {
@@ -57,10 +60,12 @@ public String getErrorMessage() {
 
 public void clickLogin() {
 	this.loginBtn.click();
+	logger.debug("Login button clicked");
 }
 
 public void clickContinue() {
 	this.forgotPassWordSubmitButton.click();
+	logger.debug("Forgot Password button has been clicked");
 }
 
 public String getValueAttribute(WebElement element) {
@@ -68,14 +73,18 @@ public String getValueAttribute(WebElement element) {
 }
 public void forgotPassUserName(String forgotten) {
 	this.forgotPassUsername.sendKeys(forgotten);
+	logger.debug("Forgot password username pass has been entered");
 }
 
 public HomePage loginToApp(WebDriver driver) throws FileNotFoundException, IOException {
 	driver.navigate().to(SF_FileUtilities.readLoginPropertiesFile("production.url"));
-	logger.debug("Navigated to the login page");
+	logger.debug("Login page deployed");
 	this.enterUsername(SF_FileUtilities.readLoginPropertiesFile("valid.username"));
+	logger.debug("Username entered");
 	this.enterPassword(SF_FileUtilities.readLoginPropertiesFile("valid.password"));
+	logger.debug("Password entered");
 	this.clickLogin();
+	logger.debug("Login buttin clicked");
 	return new HomePage(driver);
 }
 }

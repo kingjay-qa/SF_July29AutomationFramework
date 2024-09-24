@@ -1,4 +1,4 @@
-package SF_Utilities;
+ package SF_Utilities;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -28,7 +28,7 @@ public class SF_CommonUtilities {
 	@DataProvider(name = "ValidAccounts")
 	public Object loginTestDataValid() {
 //		To read those user accounts logic
-		return new Object[][] { {"mithun@tek.com", "12345" }, { "deek@tek.com", "12345" },
+		return new Object[][] { {"rosa@wise.com", "12345" }, { "flexy@minds.com", "12345" },
 				{ "dean@tek.com", "12345" } };
 	}
 

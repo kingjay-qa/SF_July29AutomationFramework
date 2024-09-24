@@ -13,14 +13,12 @@ import org.testng.asserts.SoftAssert;
 
 import SF_Listeners.SF_Listening;
 import SF_Pages.LoginPage;
+import SF_Pages.MyProfilePage;
 import SF_Utilities.SF_FileUtilities;
 
 @Listeners(SF_Listening.class)
 public class SF_LoginTest extends SF_BaseTest{
 	
-	
-	private String logErr;
-
 	@Test()
 	public void loginTestErrorTC01 () throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
@@ -57,7 +55,6 @@ public class SF_LoginTest extends SF_BaseTest{
 		lp.clickLogin();
 		soft.assertEquals(driver.getTitle(),SF_FileUtilities.readLoginPropertiesFile("homepage.title"));
 		System.out.println("The first testcase is complete");
-		soft.assertAll();
 	}
 	
 	
@@ -80,6 +77,8 @@ public class SF_LoginTest extends SF_BaseTest{
 		lp.enterUsername(expectedUsername);
 		String expectedPass = SF_FileUtilities.readLoginPropertiesFile("valid.username");
 		lp.enterPassword(expectedPass);
+		hp.clickUserMenu();
+		hp.Logout();
 	}
 	
 	@Test()
@@ -121,7 +120,6 @@ public class SF_LoginTest extends SF_BaseTest{
 		System.out.println("The 4B testcase is complete");
 		soft.assertAll();
 		System.out.println("Test");
-	}
-	 
+	} 
 }
  
