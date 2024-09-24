@@ -120,6 +120,7 @@ public class SF_LoginTest extends SF_BaseTest{
 		System.out.println("The 4B testcase is complete");
 		soft.assertAll();
 		System.out.println("Test");
+		
 	} 
 }
  
