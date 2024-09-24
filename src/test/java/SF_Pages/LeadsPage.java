@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import SF_Utilities.SF_FileUtilities;
 
@@ -27,7 +28,7 @@ public class LeadsPage extends BasePage{
 	
 	public boolean verifyLeadsViewOptions() throws FileNotFoundException, IOException {
 		boolean isLeadsViewVerified = true;
-		String[] expectedOptions = SF_FileUtilities.readLoginPropertiesFile("leadsview.options").split(",");
+		String[] expectedOptions = SF_FileUtilities.readHomeLeadsLinkFile("leadsview.options").split(",");
 		for (int i = 0; i < expectedOptions.length; i++) {
 			if (expectedOptions[i].equals(leadsView.get(i).getText())) {
 				System.out.println(
@@ -44,6 +45,14 @@ public class LeadsPage extends BasePage{
 	public void selectTodaysLeads() {
 		Select sel = new Select(viewDrop);
 		sel.selectByValue("00Bbm00000AbtaQ");
+	}
+	
+	@FindBy(name="go")
+	public WebElement goButton;
+	
+	public void Goo() {
+		goButton.click();
+		logger.info("Go button click");
 	}
 	
 }

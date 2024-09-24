@@ -19,4 +19,10 @@ public class SF_FileUtilities {
 		p.load(new FileReader(SF_ConstantFiles.HOME_TEST_DATA_FILE_PATH));
 		return p.getProperty(key);
 	}
+	
+	public static String readHomeLeadsLinkFile(String key) throws FileNotFoundException, IOException {
+		Properties p = new Properties();
+		p.load(new FileReader(SF_ConstantFiles.LEADS_LINK_DROPDOWN));
+		return p.getProperty(key);
+	}
 }

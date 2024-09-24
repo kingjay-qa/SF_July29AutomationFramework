@@ -5,11 +5,14 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import SF_Listeners.SF_Listening;
 import SF_Pages.LeadsPage;
 import SF_Pages.LoginPage;
 
+@Listeners(SF_Listening.class)
 public class SF_LeadsTest extends SF_BaseTest{
 
 	
@@ -37,7 +40,6 @@ public class SF_LeadsTest extends SF_BaseTest{
 		System.out.println(driver.getTitle());
 		
 		ld.viewDrop.click();
-	
 		Assert.assertTrue(ld.verifyLeadsViewOptions(), "Lead View options should be verified");
 
 		hp.clickUserMenu();
@@ -64,6 +66,17 @@ public class SF_LeadsTest extends SF_BaseTest{
 		logger.info("User Menu Selected");
 		hp.Logout();
 		logger.info("User logged out");
+		
+		
+		lp.loginToApp(driver);
+		hp.clickLeads();
+		System.out.println(driver.getTitle());
+		ld.Goo();
+		
+		hp.clickUserMenu();
+		logger.info("User Menu Selected");
+		hp.Logout();
+		logger.info("User logged out");	
 		System.out.println("Test Case 22 Complete");
 	}
 
