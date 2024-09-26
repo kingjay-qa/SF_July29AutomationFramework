@@ -4,11 +4,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import SF_Listeners.SF_Listening;
 import SF_Pages.LoginPage;
 import SF_Pages.OpportunitiesPage;
 
+@Listeners(SF_Listening.class)
 public class SF_CreateOptyTest extends SF_BaseTest{
 	@Test()
 	public void OpportunitiesDropDown_TC15() throws FileNotFoundException, IOException {

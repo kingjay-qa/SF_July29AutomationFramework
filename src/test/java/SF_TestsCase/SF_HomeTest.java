@@ -5,15 +5,17 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import SF_Listeners.SF_Listening;
 import SF_Pages.CustomizeMyTabsPage;
 import SF_Pages.HomePage;
 import SF_Pages.LoginPage;
 import SF_Pages.MyProfilePage;
 import SF_Pages.MySettingsPage;
 
-
+@Listeners(SF_Listening.class)
 public class SF_HomeTest extends SF_BaseTest{
 	
 	HomePage hp;
@@ -96,7 +98,7 @@ public class SF_HomeTest extends SF_BaseTest{
 		hp = lp.loginToApp(driver);
 		hp.clickUserMenu();
 		
-		hp.Logout();
+		hp.loggingOut();
 		System.out.println("Logout complete");
 		
 		}

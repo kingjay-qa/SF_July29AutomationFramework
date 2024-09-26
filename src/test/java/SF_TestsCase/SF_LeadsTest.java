@@ -25,8 +25,7 @@ public class SF_LeadsTest extends SF_BaseTest{
 		
 		System.out.println(driver.getTitle());
 		
-		hp.clickUserMenu();
-		hp.logOut.click();
+		hp.loggingOut();
 		System.out.println("Test Case 20 Complete");
 	}
 	
@@ -42,8 +41,7 @@ public class SF_LeadsTest extends SF_BaseTest{
 		ld.viewDrop.click();
 		Assert.assertTrue(ld.verifyLeadsViewOptions(), "Lead View options should be verified");
 
-		hp.clickUserMenu();
-		hp.Logout();
+		hp.loggingOut();
 		System.out.println("Test Case 21 Complete");
 	}
 	
@@ -67,11 +65,41 @@ public class SF_LeadsTest extends SF_BaseTest{
 		
 		lp.loginToApp(driver);
 		hp.clickLeads();
-		System.out.println(driver.getTitle());
-		ld.Goo();
+		ld.selectTodaysLeads();
+		System.out.println(driver.getTitle());	
 		
 		hp.loggingOut();	
 		System.out.println("Test Case 22 Complete");
+	}
+	
+	@Test() 
+	public void TodaysleadsTab_TC23() throws FileNotFoundException, IOException {
+		WebDriver driver = getBrowser();
+		LoginPage lp = new LoginPage(driver);
+		LeadsPage ld = new LeadsPage(driver);
+		hp = lp.loginToApp(driver);
+		hp.clickLeads();
+		ld.selectTodaysLeads();
+		
+		System.out.println(driver.getTitle());
+		
+		hp.loggingOut();
+		System.out.println("Test Case 23 Complete");
+	}
+	
+	@Test() 
+	public void TodaysleadsTab_TC24() throws FileNotFoundException, IOException {
+		WebDriver driver = getBrowser();
+		LoginPage lp = new LoginPage(driver);
+		LeadsPage ld = new LeadsPage(driver);
+		hp = lp.loginToApp(driver);
+		hp.clickLeads();
+		ld.newLeadClick();
+		
+		System.out.println(driver.getTitle());
+		
+		hp.loggingOut();
+		System.out.println("Test Case 23 Complete");
 	}
 
 }

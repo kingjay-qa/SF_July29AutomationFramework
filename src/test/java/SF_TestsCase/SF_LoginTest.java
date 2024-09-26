@@ -78,7 +78,7 @@ public class SF_LoginTest extends SF_BaseTest{
 		String expectedPass = SF_FileUtilities.readLoginPropertiesFile("valid.username");
 		lp.enterPassword(expectedPass);
 		lp.clickLogin();
-		hp.Logout();
+		hp.loggingOut();
 	}
 	
 	@Test()

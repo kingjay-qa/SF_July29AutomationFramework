@@ -6,12 +6,15 @@ import java.io.IOException;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import SF_Listeners.SF_Listening;
 import SF_Pages.HomePage;
 import SF_Pages.LoginPage;
 import SF_Pages.NewAccountPage;
 
+@Listeners(SF_Listening.class)
 public class SF_CreateAccountTest extends SF_BaseTest{
 	
 	@Test() 

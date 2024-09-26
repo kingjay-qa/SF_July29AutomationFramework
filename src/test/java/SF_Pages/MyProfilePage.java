@@ -22,6 +22,11 @@ public class MyProfilePage extends BasePage {
 
 	@FindBy(id = "aboutTab")
 	public WebElement aboutTab;
+	
+	public void clickAboutTab() {
+		aboutTab.click();
+		logger.info("About Tab clicked");
+	}
 
 	@FindBy(xpath = "//input[@id='lastName']")
 	public WebElement aboutTabLastName;
@@ -196,7 +201,7 @@ public class MyProfilePage extends BasePage {
 	 */
 	public boolean verifyAboutTab(WebDriver driver) {
 		boolean isAboutTabVerified = true;
-		String lastName = "King";
+		String lastName = "Abcd";
 		this.aboutTab.click();
 		logger.debug("MyProfilePage : verifyAboutTab : Error message is fetched");
 		if (this.aboutTabLastName.isDisplayed()) {

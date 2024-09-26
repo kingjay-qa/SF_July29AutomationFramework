@@ -45,14 +45,21 @@ public class LeadsPage extends BasePage{
 	public void selectTodaysLeads() {
 		Select sel = new Select(viewDrop);
 		sel.selectByValue("00Bbm00000AbtaQ");
+		logger.info("Today's Logger Clicked");
+		
+		goButton.click();
+		logger.info("Go button click");
 	}
 	
 	@FindBy(name="go")
 	public WebElement goButton;
 	
-	public void Goo() {
-		goButton.click();
-		logger.info("Go button click");
+	@FindBy(name="new")
+	public WebElement newLeadButton;
+	
+	public void newLeadClick() {
+		newLeadButton.click();
+		logger.info("New Lead Button Clicked");
 	}
 	
 }

@@ -83,11 +83,6 @@ Set <String> allWindows = driver.getWindowHandles();
 
 	}
 	
-	public void Logout() {
-		this.logOut.click();
-		logger.debug("Logout haas been clicked");
-	}
-	
 	public boolean verifyUserMenuOptions() throws FileNotFoundException, IOException {
 		boolean isUserMenuOptionsVerified = true;
 		String[] expectedUserMenuOptions = SF_FileUtilities.readLoginPropertiesFile("usermenu.options").split(",");
@@ -137,6 +132,42 @@ Set <String> allWindows = driver.getWindowHandles();
 		logger.info("User Menu Selected");
 		logOut.click();
 		logger.info("Logout has been clicked");
+	}
+	
+	//	Contacts Area 
+	
+	@FindBy(id="Contact_Tab")
+	public WebElement contactTabButton;
+	
+	public void clickContactTab() {
+		contactTabButton.click();
+		logger.info("Contact Tab Selected");
+	}
+	
+	@FindBy(xpath="//a[@href='/_ui/core/userprofile/UserProfilePage'][normalize-space()='Dean King']")
+	public WebElement accountHolder;
+	
+	public void verifyAccountName() {
+		String dee = "Dean King";
+		String dee1 = accountHolder.getText();
+		if(dee1.equalsIgnoreCase(dee)) {
+			logger.info("Account Holder Name is the same");
+		} else {
+			logger.info("Account Holder Name is NOT the same");
+		}
+	}
+	
+	@FindBy(id="home_Tab")
+	public WebElement homeButton;
+	
+	public void clickHomeTab() {
+		homeButton.click();
+		logger.info("Home Button clicked");
+	}
+	
+	public void clickAccountHolder() {
+		accountHolder.click();
+		logger.info("Account Name Selected");
 	}
 
 }
