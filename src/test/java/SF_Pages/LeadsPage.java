@@ -2,6 +2,7 @@ package SF_Pages;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -19,8 +20,11 @@ public class LeadsPage extends BasePage{
 		super(driver);
 	}
 	
+	
+	
 	@FindBy(id="fcf")
 	public List<WebElement> leadsView;
+	
 	
 	@FindBy(id = "fcf")
 	public WebElement viewDrop;
@@ -33,7 +37,7 @@ public class LeadsPage extends BasePage{
 			if (expectedOptions[i].equals(leadsView.get(i).getText())) {
 				System.out.println(
 						"Expected: " + expectedOptions[i] + " Actual: " + leadsView.get(i).getText());
-				logger.debug("Expected User Menu options have been verified");
+				logger.debug("Expected options have been verified");
 			} else {
 				isLeadsViewVerified = false;
 				logger.debug("Expected User Menu options not correct");
@@ -41,6 +45,11 @@ public class LeadsPage extends BasePage{
 		}
 		return isLeadsViewVerified;
 	}
+	
+	public void leadsViewOptions() {
+		
+	}
+	
 	
 	public void selectTodaysLeads() {
 		Select sel = new Select(viewDrop);
