@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -27,12 +28,17 @@ public class LoginSteps extends SF_BaseTest {
 	}
 
 @Given("I landed on login page")
-public void i_landed_on_login_page() {
+public void i_landed_on_login_page() throws MalformedURLException {
 	WebDriver driver = getDriver("chrome", false);
     lp = new LoginPage(driver);
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     driver.get("https://login.salesforce.com");
 	
+}
+
+private WebDriver getDriver(String string, boolean b) {
+	// TODO Auto-generated method stub
+	throw new UnsupportedOperationException("Unimplemented method 'getDriver'");
 }
 
 @When("I entered valid username")

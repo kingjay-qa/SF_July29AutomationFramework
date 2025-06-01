@@ -53,7 +53,7 @@ public class LeadsPage extends BasePage{
 	
 	public void selectTodaysLeads() {
 		Select sel = new Select(viewDrop);
-		sel.selectByValue("00Bbm00000AbtaQ");
+		sel.selectByValue("00BgK000006CTcH");
 		logger.info("Today's Logger Clicked");
 		
 		goButton.click();

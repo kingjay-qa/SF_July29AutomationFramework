@@ -13,7 +13,6 @@ import org.testng.asserts.SoftAssert;
 
 import SF_Listeners.SF_Listening;
 import SF_Pages.LoginPage;
-import SF_Pages.MyProfilePage;
 import SF_Utilities.SF_FileUtilities;
 
 @Listeners(SF_Listening.class)

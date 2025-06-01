@@ -43,7 +43,7 @@ public class ContactsPage extends BasePage{
 	
 	public void selectMyContacts() {
 		Select sel1 = new Select(viewDrop);
-		sel1.selectByValue("00Bbm00000AbthZ");
+		sel1.selectByValue("00BgK000006CTcy");
 		logger.info("My contacts selected");
 	}
 	
@@ -51,6 +51,11 @@ public class ContactsPage extends BasePage{
 	public WebElement fAccount;
 	
 	public void selectAccount() {
+		Select sel1 = new Select(viewDrop);
+		sel1.selectByValue("00BgK000006CTPS");
+		logger.info("All contacts selected");
+
+
 		fAccount.click();
 		logger.info("Account selected");
 	}

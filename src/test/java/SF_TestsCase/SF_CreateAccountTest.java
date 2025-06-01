@@ -5,13 +5,11 @@ import java.io.IOException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import SF_Listeners.SF_Listening;
 import SF_Pages.HomePage;
-import SF_Pages.LoginPage;
 import SF_Pages.NewAccountPage;
 
 @Listeners(SF_Listening.class)
@@ -20,8 +18,7 @@ public class SF_CreateAccountTest extends SF_BaseTest{
 	@Test() 
 	public void createAnAccountw_TC10() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.AccountClick();
 		hp.newButton.click();
 	
@@ -33,8 +30,7 @@ public class SF_CreateAccountTest extends SF_BaseTest{
 	@Test() 
 	public void createNewView_TC11() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.AccountClick();
 		
 		NewAccountPage ap = new NewAccountPage(driver);
@@ -45,8 +41,7 @@ public class SF_CreateAccountTest extends SF_BaseTest{
 	@Test() 
 	public void editView_TC12() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.AccountClick();
 		NewAccountPage ap = new NewAccountPage(driver);
 		ap.editViewF();
@@ -56,8 +51,7 @@ public class SF_CreateAccountTest extends SF_BaseTest{
 	@Test() 
 	public void MergingAccounts_TC13() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.AccountClick();
 		NewAccountPage ap = new NewAccountPage(driver);
 		
@@ -73,8 +67,7 @@ public class SF_CreateAccountTest extends SF_BaseTest{
 	@Test() 
 	public void createAccountReport_TC14() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.AccountClick();
 		NewAccountPage ap = new NewAccountPage(driver);
 		ap.accountReport();
@@ -84,8 +77,7 @@ public class SF_CreateAccountTest extends SF_BaseTest{
 	@Test() 
 	public void createAccountReport_TC15() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.AccountClick();
 		NewAccountPage ap = new NewAccountPage(driver);
 		ap.accountReport();

@@ -1,0 +1,31 @@
+2025-06-01-13:58:43 INFO  Successfully attached to existing Chrome session.
+2025-06-01-13:58:47 INFO  Contact Tab Selected
+2025-06-01-13:58:50 INFO  New Button Clicked
+2025-06-01-13:58:51 INFO  Lastname Entered
+2025-06-01-13:58:51 INFO  Account Name Entered
+2025-06-01-13:58:56 INFO  Save Button has been clicked
+2025-06-01-13:59:00 INFO  Contact Tab Selected
+2025-06-01-13:59:04 INFO  New View has been clicked.
+2025-06-01-13:59:04 INFO  View Name Entered
+2025-06-01-13:59:05 INFO  View Unique Name Entered
+2025-06-01-13:59:08 INFO  Save button clicked
+2025-06-01-13:59:11 INFO  Contact Tab Selected
+2025-06-01-13:59:15 INFO  New View has been clicked.
+2025-06-01-13:59:16 INFO  View Name Entered
+2025-06-01-13:59:16 INFO  View Unique Name Entered
+2025-06-01-13:59:19 INFO  Cancel button has been clicked
+2025-06-01-13:59:23 INFO  Contact Tab Selected
+2025-06-01-13:59:27 INFO  New View has been clicked.
+2025-06-01-13:59:33 INFO  Save button clicked
+2025-06-01-13:59:33 INFO  Error Occured.
+2025-06-01-13:59:36 INFO  Contact Tab Selected
+2025-06-01-14:00:00 INFO  Contact Tab Selected
+2025-06-01-14:00:01 INFO  Recently Created selected
+2025-06-01-14:00:04 INFO  Contact Tab Selected
+2025-06-01-14:00:07 INFO  New Button Clicked
+2025-06-01-14:00:07 INFO  Last name entered
+2025-06-01-14:00:08 INFO  Account Name entered
+2025-06-01-14:00:11 INFO  Save & New Button clicked
+2025-06-01-14:00:12 INFO  Creation of Account FAILED
+2025-06-01-14:00:15 INFO  Contact Tab Selected
+2025-06-01-14:00:35 INFO  WebDriver session closed successfully.

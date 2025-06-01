@@ -9,6 +9,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import SF_Listeners.SF_Listening;
+import SF_Pages.HomePage;
 import SF_Pages.LeadsPage;
 import SF_Pages.LoginPage;
 
@@ -19,29 +20,27 @@ public class SF_LeadsTest extends SF_BaseTest{
 	@Test() 
 	public void leadsTab_TC20() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.clickLeads();
 		
 		System.out.println(driver.getTitle());
 		
-		hp.loggingOut();
+	//	hp.loggingOut();
 		System.out.println("Test Case 20 Complete");
 	}
 	
 	@Test() 
 	public void leadsSelectView_TC21() throws FileNotFoundException, IOException {
 		WebDriver driver = getBrowser();
-		LoginPage lp = new LoginPage(driver);
 		LeadsPage ld = new LeadsPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.clickLeads();
 		System.out.println(driver.getTitle());
 		
 		ld.viewDrop.click();
 		Assert.assertTrue(ld.verifyLeadsViewOptions(), "Lead View options should be verified");
 
-		hp.loggingOut();
+	//	hp.loggingOut();
 		System.out.println("Test Case 21 Complete");
 	}
 	
@@ -50,7 +49,7 @@ public class SF_LeadsTest extends SF_BaseTest{
 		WebDriver driver = getBrowser();
 		LoginPage lp = new LoginPage(driver);
 		LeadsPage ld = new LeadsPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.clickLeads();
 		System.out.println(driver.getTitle());
 		
@@ -68,7 +67,7 @@ public class SF_LeadsTest extends SF_BaseTest{
 		ld.selectTodaysLeads();
 		System.out.println(driver.getTitle());	
 		
-		hp.loggingOut();	
+	//	hp.loggingOut();	
 		System.out.println("Test Case 22 Complete");
 	}
 	
@@ -77,13 +76,13 @@ public class SF_LeadsTest extends SF_BaseTest{
 		WebDriver driver = getBrowser();
 		LoginPage lp = new LoginPage(driver);
 		LeadsPage ld = new LeadsPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.clickLeads();
 		ld.selectTodaysLeads();
 		
 		System.out.println(driver.getTitle());
 		
-		hp.loggingOut();
+	//	hp.loggingOut();
 		System.out.println("Test Case 23 Complete");
 	}
 	
@@ -92,13 +91,13 @@ public class SF_LeadsTest extends SF_BaseTest{
 		WebDriver driver = getBrowser();
 		LoginPage lp = new LoginPage(driver);
 		LeadsPage ld = new LeadsPage(driver);
-		hp = lp.loginToApp(driver);
+		hp = new HomePage(driver);
 		hp.clickLeads();
 		ld.newLeadClick();
 		
 		System.out.println(driver.getTitle());
 		
-		hp.loggingOut();
+	//	hp.loggingOut();
 		System.out.println("Test Case 23 Complete");
 	}
 
